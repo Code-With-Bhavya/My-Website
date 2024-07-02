@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap');
 
+
+
+
+
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -602,4 +606,13 @@ body {
   opacity: 0.3;
   font-size: 13px;
   margin-bottom: 0;
+}
+
+
+
+#main {
+  height: 500vh;
+}
+html {
+  height: 500vh;
 }

@@ -1,5 +1,27 @@
 const API_KEY = ['AIzaSyAf0edYw94yUvMuLmEf5CVUw11XrpHT_5U','AIzaSyCGRQ9QiwOsZdbaUG6I0tFIUdsdfdOx9YE' , 'AIzaSyBRG6SMwIu4JrZM_KXJbU_SWL-u_X0ToWQ'] // Replace with your API key
 const CHANNEL_ID = 'UCZmAh77ShJkCPUp-Nl0PLOw';  // Replace with your channel ID
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector('#main'),
+      smooth: true
+    });
+  
+    // Observe for changes in the DOM and update Locomotive Scroll
+    const observer = new MutationObserver(() => {
+      scroll.update();
+    });
+  
+    const config = { childList: true, subtree: true };
+    observer.observe(document.querySelector('#main'), config);
+  
+    // Call update once all content is loaded
+    window.addEventListener('load', () => {
+      scroll.update();
+    });
+  });
+  
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
