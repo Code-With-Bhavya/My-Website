@@ -173,6 +173,7 @@ nav a:hover {
   font-weight: 400;
   font-style: normal;
   font-size: 7em;
+  text-shadow: 0 0 20px #ffffff;
 }
 
 #subtext {
@@ -184,6 +185,39 @@ nav a:hover {
   height: 70%;
   display: flex;
   justify-content: space-around;
+}
+
+.links {
+  height: 30%;
+  width: 100vw;
+  /* background-color: blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.7em;
+}
+
+.links-wrapper {
+  width: 50vw;
+  height: fit-content;
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+#btn {
+  color: white;
+  padding: 12px 40px;
+  border-radius: 13px;
+  background-color: #d9d9d932;
+  border: none;
+  cursor: pointer;
+}
+
+#btn:hover {
+  background-color: #d9d9d90d;
 }
 
 #stats {
@@ -352,6 +386,10 @@ body {
 
 /* Add this CSS code for mobile devices */
 @media screen and (max-width: 600px) {
+  #stats {
+    width: 80%;
+  }
+
   #logo {
     width: 34%;
     margin-left: 76px;
@@ -442,6 +480,33 @@ body {
     padding-bottom: 20px;
   }
 
+
+  .headings {
+    flex-direction: column;
+  }
+  
+  .links-wrapper {
+    width: 90vw;
+  }
+
+
+  .headings {
+    align-items: center;
+  }
+
+  #stats {
+    margin-top: 10px;
+  }
+
+  .subs i, .likes i{
+    scale: 0.7;
+  }
+  
+  .subs p, .likes p{
+    font-size: 1.2em;
+    margin-left: 2px;
+    padding-top: 0.8em;
+  }
   #maintext {
 
     font-size: 4em;
@@ -449,6 +514,15 @@ body {
   
   #subtext {
     font-size: 1em;
+  }
+
+  #btn {
+    color: white;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background-color: #d9d9d932;
+    border: none;
+    cursor: pointer;
   }
 }
 
