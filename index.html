@@ -10,29 +10,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="icon" href="images/logo.png" type="image/x-icon">
     <link href="style.css" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 
 <body>
     <header>
-        <button class="hamburger" onclick="toggleSidebar()">
-            &#9776;</button>
-        <img id="logo" src="logo.png">
-        <h1 id="chname">Chess Master</h1>
-        <h2 id="handle">@chess_master492</h2>
+        <div class="headings">
+            <div id="mainText">
+                <h1 id="maintext">ChessMaster</h1>
+                <p id="subtext">@chess_master</p>
+            </div>
+    
+            <div id="stats">
+                <div class="subs">
+                    <i class="ri-youtube-fill ri-3x"></i>
+                    <p id="subCount">100,000</p>
+                </div>
+                <div class="likes">
+                    <i class="ri-eye-fill ri-3x"></i>
+                    <p id="viewsCount">5,000,000</p>
+                </div>
+            </div>
+        </div>
 
-        <p id="subscount">Subscribers : </p>
-        <p id="viewscount">Views : </p>
-        <nav>
-            <a id="buttons" href="index.html">Home</a>
-            <a id="buttons" href="about.html">About</a>
-            <a id="buttons" href="https://youtube.com/@chess_master492?si=uhlb93jm-j_oDm7R" target="_blank">Yt
-                Channel</a>
-            <a id="buttons" href="https://www.chess.com/member/guptabhavya_281208" target="_blank">Play with
-                ChessMaster</a>
-            <a id="buttons" href="feedback.html">Feedback</a>
+        <div class="links"></div>
 
-        </nav>
     </header>
     <!-- sidebar -->
 

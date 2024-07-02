@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap');
+
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -134,7 +136,8 @@ header {
   padding: 40px 0;
   top: 0px;
   width: 100%;
-  height: 220px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   text-align: center;
 }
 
@@ -163,6 +166,49 @@ nav a:hover {
   margin: auto;
   padding: 0 20px;
   flex: 1;
+}
+
+#maintext {
+  font-family: "Princess Sofia", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 7em;
+}
+
+#subtext {
+  font-size: 1.4em;
+}
+
+.headings {
+  width: 100vw;
+  height: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#stats {
+  border-radius: 20px;
+  width: 18rem;
+  height: 11rem;
+  background-color: #d9d9d934;
+}
+
+.subs,.likes {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subs i{
+  color: rgb(245, 61, 61);
+}
+
+.subs p, .likes p{
+  font-size: 1.4em;
+  padding-top: 0.6em;
+  margin-left: 10px;
 }
 
 .shorts {
@@ -215,7 +261,6 @@ nav a:hover {
 }
 
 footer {
-  background-color: rgba(51, 51, 51, 0.8);
   /* Adding transparency */
   color: #fff;
   text-align: center;
@@ -223,10 +268,7 @@ footer {
   width: 100%;
 }
 
-.content {
-  /* Adjust according to the height of your header */
-  padding-bottom: 60px;
-}
+
 
 body,
 h1,
@@ -342,9 +384,7 @@ body {
   .short {
     width: 100%;
   }
-  header {
-    height: 200px;
-  }
+
   h1 {
     font-size: 30px;
     margin-top: 20px;
@@ -367,14 +407,13 @@ body {
 /*  footer css */
 
 .footer-dark {
-  padding: 50px 0;
   color: #f0f9ff;
-  background-color: #282d32;
+  background-color: #383843;
 }
 
 .footer-dark h3 {
   margin-top: 0;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
   font-weight: bold;
   font-size: 16px;
 }
@@ -401,6 +440,15 @@ body {
   .footer-dark .item:not(.social) {
     text-align: center;
     padding-bottom: 20px;
+  }
+
+  #maintext {
+
+    font-size: 4em;
+  }
+  
+  #subtext {
+    font-size: 1em;
   }
 }
 
