@@ -1,13 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap');
-
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap");
 
 * {
   font-family: "Poppins", sans-serif;
 }
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -16,7 +13,6 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #222831;
-  /* Replace with the path to your background image */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -91,7 +87,7 @@ body {
 }
 
 strong {
-  color: #00ADB5;
+  color: #00adb5;
   text-shadow: 0 0 10px #00acb58e;
 }
 
@@ -139,6 +135,12 @@ strong {
 }
 
 header {
+  position: relative;
+  background-image: url(board.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+
   background-color: #393e46;
   /* Adding transparency */
   color: white;
@@ -158,15 +160,16 @@ nav {
 #button-a {
   text-decoration: none;
   background-color: none;
-  border: 2px solid #00ADB5;
+  border: 2px solid #00adb5;
   border-radius: 50px;
   padding: 14px 40px;
-  color: #00ADB5;
+  color: #00adb5;
   font-size: 0.8em;
 }
 
 #button-a:hover {
-  background-color: #00ADB5;
+  transition: 0.1s;
+  background-color: #00adb5;
   color: white;
   box-shadow: 0 0 40px #00acb5d8;
 }
@@ -242,6 +245,7 @@ nav a:hover {
 }
 
 #btn:hover {
+  transition: 0.1s;
   background-color: #d9d9d90d;
 }
 
@@ -252,7 +256,8 @@ nav a:hover {
   background-color: #d9d9d934;
 }
 
-.subs,.likes {
+.subs,
+.likes {
   width: 100%;
   height: 50%;
   display: flex;
@@ -260,11 +265,12 @@ nav a:hover {
   align-items: center;
 }
 
-.subs i{
+.subs i {
   color: rgb(245, 61, 61);
 }
 
-.subs p, .likes p{
+.subs p,
+.likes p {
   font-size: 1.4em;
   padding-top: 0.6em;
   margin-left: 10px;
@@ -295,6 +301,7 @@ nav a:hover {
 .short:hover {
   transform: scale(1.05);
 }
+
 /* #sbarbutton{
     position: ;
 } */
@@ -327,8 +334,6 @@ footer {
   width: 100%;
 }
 
-
-
 body,
 h1,
 h2,
@@ -337,6 +342,7 @@ p,
 footer {
   font-family: "Poppins", sans-serif;
 }
+
 /* sidebar */
 body {
   margin: 0;
@@ -424,31 +430,39 @@ body {
     width: 34%;
     margin-left: 76px;
   }
+
   .short img {
     width: 100vw;
   }
+
   #buttons {
     display: none;
   }
+
   #subscount {
     font-size: 2vh;
     margin-left: 1px;
   }
+
   #viewscount {
     font-size: 2vh;
     margin-right: 1px;
   }
+
   #chname {
     margin-top: 40px;
     font-size: 55px;
   }
+
   .container {
     max-width: 100%;
     padding: 0 10px;
   }
+
   .shorts {
     margin-top: 20px;
   }
+
   .short {
     width: 100%;
   }
@@ -457,15 +471,19 @@ body {
     font-size: 30px;
     margin-top: 20px;
   }
+
   nav a {
     font-size: 14px;
   }
+
   p {
     font-size: 16px;
   }
+
   footer {
     padding: 10px 0;
   }
+
   /* SideBar */
   .msidebar {
     width: 0;
@@ -510,15 +528,13 @@ body {
     padding-bottom: 20px;
   }
 
-
   .headings {
     flex-direction: column;
   }
-  
+
   .links-wrapper {
     width: 90vw;
   }
-
 
   .headings {
     align-items: center;
@@ -528,20 +544,22 @@ body {
     margin-top: 10px;
   }
 
-  .subs i, .likes i{
+  .subs i,
+  .likes i {
     scale: 0.7;
   }
-  
-  .subs p, .likes p{
+
+  .subs p,
+  .likes p {
     font-size: 1.2em;
     margin-left: 2px;
     padding-top: 0.8em;
   }
-  #maintext {
 
+  #maintext {
     font-size: 4em;
   }
-  
+
   #subtext {
     font-size: 1em;
   }
@@ -608,11 +626,10 @@ body {
   margin-bottom: 0;
 }
 
-
-
 #main {
   height: 500vh;
 }
+
 html {
   height: 500vh;
 }
