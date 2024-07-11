@@ -674,4 +674,8 @@ html {
     padding: 15px;
     line-height: 29px;
   }
+  #viewicon {
+    height: 30px;
+    width: 30px;
+  }
 }
