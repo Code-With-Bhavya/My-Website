@@ -12,7 +12,8 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #222831;
+  background: #222831 url('Neon.png') no-repeat ;
+  background-position: center center ;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -376,8 +377,6 @@ p,
 footer {
   font-family: "Poppins", sans-serif;
 }
-
-/* sidebar */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
