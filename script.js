@@ -57,9 +57,12 @@ const API_KEYS = [
       const subscriberCount = stats.subscriberCount;
       const viewCountWithoutCommas = stats.viewCount;
       const viewCount = viewCountWithoutCommas.toLocaleString();
-  
+      
+      function formatNumber(num) {
+        return num >= 1000 ? (num / 1000).toFixed(1) + 'K' : num.toString();
+      }
       document.getElementById('subCount').innerText = `${subscriberCount}`;
-      document.getElementById('viewsCount').innerText = `${viewCount}`;
+      document.getElementById('viewsCount').innerText = `${formatNumber(viewCount) }`;
     } catch (error) {
       console.error('Error fetching YouTube data:', error);
       document.getElementById('subCount').innerText = '1,00,000';
