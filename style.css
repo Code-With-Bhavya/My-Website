@@ -297,6 +297,24 @@ body {
     height: 11rem;
     background-color: #d9d9d934;
   }
+  .chess{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 20px;
+    width: 18rem;
+    height: 5rem;
+    margin: 50px;
+  }
+  #chesselo {
+    
+    
+    
+    
+    color: white;
+    font-size: 20px;
+  }
 
   .subs,
   .likes {

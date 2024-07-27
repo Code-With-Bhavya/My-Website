@@ -69,7 +69,19 @@ const API_KEYS = [
       document.getElementById('viewsCount').innerText = '3,00,00,000';
     }
   }
-  
+  async function getChessComRatings(username) {
+    try {
+        const response = await fetch(`https://api.chess.com/pub/player/${username}/stats`);
+        const data = await response.json();
+        
+        if (data.chess_rapid) {
+          chess = document.getElementById('chesselo');
+          chesselo.innerText = `Rapid :${data.chess_rapid.last.rating}`;
+       }
+    } catch (error) {
+        console.error('Error fetching Chess.com ratings:', error);
+    }
+}
   async function fetchShortViews() {
     try {
       const shortsResponse = await fetch(`https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=${CHANNEL_ID}&maxResults=9&type=video&key=${API_KEYS[getRandomInt(0, API_KEYS.length)]}`);
@@ -112,7 +124,7 @@ const API_KEYS = [
       console.error('Error fetching short views:', error);
     }
   }
-  
+  getChessComRatings('guptabhavya_281208');
   fetchYouTubeData();
   fetchShortViews();
 //Chess
