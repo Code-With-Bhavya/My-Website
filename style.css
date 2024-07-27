@@ -460,7 +460,28 @@ body {
   text-decoration: none;
   color: white;
 }
-
+#tips{
+  color: rgb(0, 17, 255);
+  filter: brightness(100);
+  font-weight: 900;
+  font-size: 50px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.tip{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: max-content;
+  background-color: #3e3d3a;
+  border-radius: 100px;
+  padding: 30px;
+}
+.tip img{
+  width: 120px;
+}
 /*  footer css */
 
 .footer-dark {
