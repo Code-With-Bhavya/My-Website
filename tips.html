@@ -4,8 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chess Tips</title>
+    <link rel="stylesheet" href="tipskastyle.css">
 </head>
 <body>
-    
+    <div class="carousel">
+        <div class="slides">
+            <div class="slide" id="tip1">
+                <img src="tip1.jpeg" alt="Tip 1 Image" id="img1">
+                <div class="text">
+                    <h2 id="letsmove">Take Your Time</h2>
+                    <p id="toberemoved">Take Your Time to think that if you play this move, what will be the threat on the opponent's king. What will be the impact of this on your postion. In the beginning try to develop your peices.. It will take just 2 or 3 games to practise this technique.. Then you will be familiar with this trick and you will not need to remember this...</p>
+                    <p id="dn">Let's Practise this tip.. If you want to practise this tip click on this button -> <button class="practise" onclick="practisetip1()">Practise</button></p>
+                    
+                </div>
+            </div>
+            <div class="slide" id="tip2">
+                <img src="tip2.jpg" alt="Tip 2 Image">
+                <div class="text">
+                    <h2>Stop Playing Gambits!Learn Openings</h2>
+                    <p>Gambits could definetly give you 100 or 200 elo but playing gambit weaks your positions.. If opponent did not fall in your gambit, your postion is weaken and you are muchh behind in the game.. Instead, learn good openings like italian or caro-kaan..</p>
+                </div>
+            </div>
+            <div class="slide" id="tip3">
+                <img src="tip3.jpg" alt="Tip 3 Image">
+                <div class="text">
+                    <h2>Sometimes Defence is also good!</h2>
+                    <p>Not always rush to do attack.. Dont always attack opponent peices, sometime you should only protect your peices.. Learn to do defence and make your opponent feel annoyed and force him/her to do a mistake.. </p>
+                </div>
+            </div>
+            <div class="slide" id="tip4">
+                <img src="tip4.jpg" alt="Tip 4 Image">
+                <div class="text">
+                     <h2>Don't play too much matches at a time!</h2>
+                    <p>It happened with me many times.. When I lose a match, I dont't stop playing until I win.. This decreases my rating and in the hurry to win a match, i was not able to win. So, if you lose , take a while , anaylse your match and then play patiently..</p>
+                </div>
+            </div>
+            <div class="slide" id="tip5">
+                <img src="tip5.jpg" alt="Tip 5 Image">
+                <div class="text">
+                    <h2>Anaylse your game with Chess.com Engine!!</h2>
+                    <p>Anaylsing your game is the most important to master chess.. After playing game on chess.com, it offers it's free anaylse of game.. In the section of best move, try to think why this is the best move and why my move is a blunder. If movefeedback is not coming you can turn it on(only chess.com app). After completion of game, click anaylse then click on setting icon and turn on move feedback. This is the reason I reached 1400 elo..</p>
+                </div>
+            </div>
+        </div>
+        <button class="prev" onclick="prevSlide()">❮</button>
+        <button class="next" onclick="nextSlide()">❯</button>
+    </div>
+    <script src="tipskajs.js"></script>
 </body>
 </html>
