@@ -18,6 +18,9 @@ body {
 }
 
 .carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 90%;
   max-width: 70vw;
@@ -182,20 +185,21 @@ button {
   }
 }
 @media (max-width: 1500px){
-  .carousel{
-    max-height: 40vh;
-    min-width: 700px;
+  .text h2 , .text p{
+    font-size: 10px;
   }
-  #tip5 h2{
-    font-size: 40px;
-  }
-  #tip5 p{
-    font-size: 22px;
-  }
-  #tip1 h2{
-    transform: translateX(-15%);
+  .text h2 , #tip5 h2{
+    font-size: 30px;
+    line-height: normal;
   }
   #tip1 img{
-    transform: translateY(30%);  
+   position: relative;
+   top: -70px;
+  }
+  .carousel{
+    transform: rotate(90deg);
+    min-width: 80vh;
+    max-height: 99vw;
+    align-items: flex-start;
   }
 }
