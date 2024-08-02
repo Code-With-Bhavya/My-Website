@@ -107,7 +107,6 @@ body {
 #downcontent {
   display: flex;
   flex-direction: column;
-  width: 50vw;
   justify-content: center;
   align-items: center;
   align-items: center;
@@ -346,7 +345,7 @@ nav a:hover {
   background-image: url(shortback.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 360px;
+  height: 300px;
   overflow-y: hidden;
   overflow-x: hidden;
 }
@@ -473,7 +472,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 390px;
   background-color: #3e3d3a;
   border-radius: 100px;
   padding: 10px;
@@ -669,10 +668,12 @@ html {
 
   .shorts {
     margin-top: 20px;
+    
   }
 
   .short {
     width: 100%;
+    height: 320px;
   }
 
   h1 {
