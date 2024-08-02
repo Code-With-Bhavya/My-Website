@@ -464,7 +464,7 @@ body {
   color: rgb(0, 17, 255);
   filter: brightness(100);
   font-weight: 900;
-  font-size: 50px;
+  font-size: 80px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -473,11 +473,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 100vw;
-  min-width: 100vw;
+  width: 100vw;
   background-color: #3e3d3a;
   border-radius: 100px;
-  padding: 30px;
+  padding: 10px;
 }
 .tip img{
   width: 120px;
@@ -554,9 +553,7 @@ html {
 
 @media (max-width: 800px) {
   #tips{
-    max-width: 100vw;
     font-size: 30px;
-    justify-content: center;
   }
   .footer-dark .item.social {
     text-align: center;
@@ -600,9 +597,14 @@ html {
     gap: 0px;
   }
   #stats {
-    margin-top: 1px;
     width: 40%;
-    height: 45%;
+    height: 82%;
+    position: relative;
+    left: 10px;
+    top: -8px;
+  }
+  #rapidlogo{
+    width: 33px;
   }
 
   .subs i,
@@ -618,8 +620,8 @@ html {
   }
 
   #maintext {
-    margin-top: 0px;
-    font-size: 4em;
+    margin-top: -20px;
+    font-size: 3em;
   }
 
   #subtext {
@@ -633,6 +635,7 @@ html {
     background-color: #d9d9d932;
     border: none;
     cursor: pointer;
+    font-size: 13px;
   }
 
   #logo {
