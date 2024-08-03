@@ -129,5 +129,18 @@ async function fetchShortViews() {
 getChessComRatings('guptabhavya_281208');
 fetchYouTubeData();
 fetchShortViews();
-//Chess
+//rating
+function ratingsub() {
+  var newDiv = document.createElement('div');
+  newDiv.className = 'thankstext';
+  var name = document.getElementById('nameent').value;
+  var rat = document.getElementById('ratingent').value;
+  if (name == '' || rat=='') {
+    alert('Please Enter you name or rating before submission..')
+    return
+  }
+  newDiv.innerHTML = `Thanks For submitting your rating ${name}.. Your rating ${rat} has been stored in our local storage and will be displayed in the leaderboard sonn..`;
+  document.getElementById('ratingcol').appendChild(newDiv);
+}
+
 

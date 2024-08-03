@@ -56,7 +56,8 @@ body {
 }
 
 #visitchannel,
-#feedbackbtn {
+#feedbackbtn,
+#tips , #ratingsub{
   text-decoration: none;
   background-color: #222831;
   border: 2px solid #00adb5;
@@ -319,7 +320,8 @@ nav a:hover {
 }
 
 .subs p,
-.likes p , .chess p {
+.likes p,
+.chess p {
   font-size: 1.4em;
   padding-top: 0.6em;
   margin-left: 10px;
@@ -391,93 +393,104 @@ body {
   height: 100vh;
   overflow-x: hidden;
 }
-
-.sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: black;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidebar a {
-  font-weight: 900;
-  margin: 5px;
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: black;
-  background-color: white;
-  margin-bottom: 10px;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidebar a:hover {
-  transition: 0.2s;
-  background-color: black;
-  color: white;
-}
-
-.sidebar h2 {
-  box-shadow: 0px 0px 12px 5px yellow;
-  font-size: 40px;
-  margin: 10px;
-  height: auto;
-  color: black;
-  font-weight: 900;
-  text-align: center;
-  border: 2px solid black;
-  background-color: white;
-  margin-bottom: 30px;
-}
-
 .content {
   flex-grow: 1;
   padding: 16px;
 }
-
-.hamburger {
-  border: 2px solid white;
-  /* box-shadow: 2px 2px 2px yellow; */
-  float: right;
-  margin-right: 20px;
-  /* display: inline; */
-  font-size: 30px;
-  cursor: pointer;
-  background: black;
-  color: white;
-  width: auto;
-  height: auto;
-}
-
 #rem {
   text-decoration: none;
   color: white;
 }
-#tips{
+#tips {
   color: rgb(0, 17, 255);
   filter: brightness(100);
   font-weight: 900;
   font-size: 80px;
   background-color: transparent;
-  border: none;
   cursor: pointer;
+  width: 100%;
 }
-.tip{
+.tipdesc {
+  color: white;
+  width: 79vw;
+}
+#tipsdes {
+  color: white;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 500;
+  text-shadow: 2px 2px 20px blue;
+}
+#ratingcol{
+  width: 75vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 390px;
-  background-color: #3e3d3a;
-  border-radius: 100px;
-  padding: 10px;
+  flex-direction: column;
+  background-color: #202020;
+  border-radius: 50px;
+  padding: 50px;
 }
-.tip img{
+#nameent , #ratingent{
+  padding: 10px;
+  font-size: 30px;
+  font-weight: 200;
+  text-shadow: none;
+  color: white;
+  border-radius: 19px;
+  background-color: transparent;
+  border: 2px solid white;
+  margin: 10px;
+}
+.thankstext{
+  font-size: 30px;
+  color: white;
+  text-shadow: none;
+
+}
+#ratingsub{
+  border-radius: 50px;
+  background-color: transparent;
+  width: min-content;
+  padding: 4px 20px;
+  font-size: 20px;
+  margin: 10px;
+  color: red;
+  font-weight: 900;
+}
+#ratingsub:hover{
+  transition: 0.1s;
+  background-color: rgb(248, 248, 68);
+  color: black;
+  box-shadow: 0 0 40px #f7f30fd8;
+}
+.rating{
+  color: white;
+  font-size: 50px;
+  font-weight: 900;
+}
+.tip:hover , .tip:hover #tips {
+  transition: 0.1s;
+  background-color: #00adb5;
+  color: white;
+  box-shadow: 0 0 40px #00acb5d8;
+}
+.tip:hover img{
+    transition: 0.1s;
+    filter: brightness(800%);
+    color: yellow;
+  
+}
+.tip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding: 10px;
+  border-radius: 50px;
+  /* border: 2px solid #00adb5; */
+}
+.tip img {
   width: 120px;
 }
 /*  footer css */
@@ -551,7 +564,7 @@ html {
 }
 
 @media (max-width: 800px) {
-  #tips{
+  #tips {
     font-size: 30px;
   }
   .footer-dark .item.social {
@@ -588,7 +601,6 @@ html {
   .headings {
     flex-direction: column;
     align-items: center;
-
   }
 
   .links-wrapper {
@@ -602,7 +614,7 @@ html {
     left: 10px;
     top: -8px;
   }
-  #rapidlogo{
+  #rapidlogo {
     width: 33px;
   }
 
@@ -668,7 +680,6 @@ html {
 
   .shorts {
     margin-top: 20px;
-    
   }
 
   .short {
