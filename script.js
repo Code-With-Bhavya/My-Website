@@ -135,12 +135,33 @@ function ratingsub() {
   newDiv.className = 'thankstext';
   var name = document.getElementById('nameent').value;
   var rat = document.getElementById('ratingent').value;
-  if (name == '' || rat=='') {
+  if (name == '' || rat == '') {
     alert('Please Enter you name or rating before submission..')
     return
   }
   newDiv.innerHTML = `Thanks For submitting your rating ${name}.. Your rating ${rat} has been stored in our local storage and will be displayed in the leaderboard sonn..`;
   document.getElementById('ratingcol').appendChild(newDiv);
+  const saveData = async () => {
+    try {
+      const response = await fetch('http://localhost:3000/save', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, rat }),
+      });
+
+      if (response.ok) {
+        console.log('Data saved successfully');
+      } else {
+        console.error('Failed to save data');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+  saveData();
 }
+
 
 
