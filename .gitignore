@@ -1,0 +1,19 @@
+# Node.js modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+tmp/
+
+# Build directories (for frontend)
+build/
+dist/
+
+# Package lock file (optional)
+package-lock.json

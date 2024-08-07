@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        body {
+            font-family: Poppins, sans-serif;
+            background-color: #222821;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #feedbacktitle {
+            position: relative;
+            left: -114px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        #ftitle {
+            font-weight: 900;
+            font-size: 40px;
+            color: #BFBFCE;
+        }
+
+        #feedbackimage {
+            height: 112px;
+            width: 113px;
+        }
+
+        .container {
+            background-color: #30353E;
+            border: 2px solid #30353E;
+            border-radius: 20px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            font-weight: 900;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            height: 47px;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #4C4D56;
+            background-color: #4C4D56;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]::placeholder,
+        textarea::placeholder {
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            left: 2px;
+            font-weight: 500;
+            font-size: large;
+            color: #BFBFCE;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 8px;
+            margin-bottom: 10px;
+            background-color: #4C4D56;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .stars {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: left;
+
+            margin-bottom: 10px;
+        }
+
+        .stars input {
+            display: none;
+        }
+
+        .stars label {
+            font-size: 40px;
+            color: #30353E;
+
+            text-shadow: 0px 0px 11px white;
+            filter: brightness(5);
+            cursor: pointer;
+        }
+
+        .stars input:checked~label {
+            color: rgb(255, 255, 0);
+        }
+
+        .stars label:hover,
+        .stars label:hover~label {
+            color: yellow;
+        }
+
+        .stars input:checked~label:hover,
+        .stars input:checked~label:hover~label {
+            color: yellow;
+        }
+
+        button {
+            background-color: #30353E;
+            color: #00ADB5;
+            padding: 10px 20px;
+            border: 3px solid #00ADB5;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            height: 50px;
+            font-size: x-large;
+        }
+
+        button:hover {
+            transition: 0.1s;
+            background-color: #00ADB5;
+            color: black;
+        }
+
+        #startitle {
+            font-size: 20px;
+            width: 100%;
+            height: 47px;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #4C4D56;
+            background-color: #4C4D56;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: large;
+            color: #BFBFCE;
+        }
+        @media (max-width: 800px) {
+            #feedbacktitle{
+                margin-left: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="feedbacktitle">
+        <h1 id="ftitle">Feedback</h1>
+        <img id="feedbackimage" src="../images/feedbackimage.png" alt="">
+    </div>
+    <div class="container">
+        <h1>Share your valuable feedback and thoughts about our channel and website, and let us know your love and
+            suggestions</h1>
+        <form id="feedbackForm" onsubmit="return submitform(event)">
+            <input type="text" id="name" name="name" placeholder="Name">
+            <div id="startitle">Star Rating: </div>
+            <div class="stars">
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+            </div>
+            <textarea id="message" name="message" placeholder="Write your feedback here..."></textarea>
+            <button type="submit" onclick="sendEmail()">Submit Feedback</button>
+        </form>
+    </div>
+    <script>
+        let starvalue = 0
+        var star1 = document.getElementById('star1');
+        var star2 = document.getElementById('star2');
+        var star3 = document.getElementById('star3');
+        var star4 = document.getElementById('star4');
+        var star5 = document.getElementById('star5');
+        star1.addEventListener('click' , function(){starvalue = 1});
+        star2.addEventListener('click' , function(){starvalue = 2});
+        star3.addEventListener('click' , function(){starvalue = 3});
+        star4.addEventListener('click' , function(){starvalue = 4});
+        star5.addEventListener('click' , function(){starvalue = 5});
+        
+        function submitform(event) {
+            event.preventDefault();
+            window.location.href = "thankyou.html";
+            return true;
+        };
+        function sendEmail() {
+            var message = document.getElementById('message').value;
+            if (message.trim() === "" || message.length < 5) {
+                message = "Your Site and Youtube Channel , both are fantastic!!! It was my pleasure that I could see a lovely site like yours\nYour site is a perfect Example of well-designed website and the Content of ur Channel is Superb!\nYour YT channel would definitely reach great heights in future!!!";
+            };
+            var name = document.getElementById('name').value;
+            const subject = "Feedback About Chess Master Website";
+            const body = `Dear Chess Master,\n\nMy Rating For Your Website is :${starvalue} star \n\n${message}\n\nThanks,\n${name}`;
+            const mailtoLink = `mailto:guptabhavya1402@email.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
+        };
+    </script>
+</body>
+
+</html>

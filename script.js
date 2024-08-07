@@ -115,7 +115,7 @@ async function fetchShortViews() {
           <a href="https://youtube.com/watch?v=${videoId}" target="_blank">
             <img src="${thumbnailUrl}" id='shortimg' alt="${title}">
             <div id='shortcontent'>
-              <img src="view.png" id='viewicon' alt=''>
+              <img src="images/view.png" id='viewicon' alt=''>
               <span class="views"> ${views}</span>
             </div>
             <p class='shorttitle'>${title}</p>
