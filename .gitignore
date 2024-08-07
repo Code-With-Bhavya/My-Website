@@ -15,5 +15,3 @@ tmp/
 build/
 dist/
 
-# Package lock file (optional)
-package-lock.json
