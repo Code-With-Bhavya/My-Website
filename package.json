@@ -6,7 +6,6 @@
     "start": "node server.js"
   },
   "dependencies": {
-    // your dependencies here
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.19.2"
