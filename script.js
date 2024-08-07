@@ -141,6 +141,7 @@ function ratingsub() {
   }
   newDiv.innerHTML = `Thanks For submitting your rating ${name}.. Your rating ${rat} has been stored in our local storage and will be displayed in the leaderboard sonn..`;
   document.getElementById('ratingcol').appendChild(newDiv);
+  
   const saveData = async () => {
     try {
       const response = await fetch('http://localhost:3000/save', {
